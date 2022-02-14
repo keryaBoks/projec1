@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" id="theme">
 
     <title>Project</title>
 </head>
@@ -27,21 +27,24 @@
                                 <p class="text-center mt-3 headerPortfolio">Portfolio</p>
 
                                 </button>
-                                <input type="search" class=" mySearch " placeholder="Search" />
-
-                                <svg xmlns="http://www.w3.org/2000/svg" class="loop" width="20" height="20" fill="none"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
-                                    <defs></defs>
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <path d="M21 21l-4.35-4.35"></path>
-                                </svg>
+                                <div class="searchInput">
+                                    <input type="search" class=" mySearch " placeholder="Search" />
+                                </div>
+                                <div class="svgSearch">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="loop" width="20" height="20"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+                                        <defs></defs>
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="M21 21l-4.35-4.35"></path>
+                                    </svg>
+                                </div>
                         </form>
                     </div>
                     <div>
                         <div class="d-flex">
                             <div class="app-header-right">
-                                <button class="mode-switch" title="Switch Theme">
+                                <button id="switchMode" class="mode-switch" title="Switch Theme">
                                     <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="2" width="24" height="24"
                                         viewBox="0 0 24 24">
@@ -84,16 +87,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-1 col-md-1 col-sm-12 d-flex main-sidebar">
-                    <a href="" class="app-sidebar-link active">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-home">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
-                    </a>
+                    <div class="home-btn">
+                        <a href="" class="app-sidebar-link1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-home">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                        </a>
+                    </div>
                     <a href="" class="app-sidebar-link">
-                        <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="none"
                             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             class="feather feather-pie-chart" viewBox="0 0 24 24">
                             <defs />
@@ -101,7 +106,7 @@
                         </svg>
                     </a>
                     <a href="" class="app-sidebar-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-calendar">
                             <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -111,7 +116,7 @@
                         </svg>
                     </a>
                     <a href="" class="app-sidebar-link">
-                        <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="none"
                             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             class="feather feather-settings" viewBox="0 0 24 24">
                             <defs />
@@ -121,7 +126,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="col-xl-7 col-md-9 col-sm-12 main-block">
+                <div class="col-xl-8 col-md-9 col-sm-12 main-block">
                     <div>
                         <div class="d-flex main-center">
                             <p>Project</p>
@@ -130,17 +135,17 @@
                         </div>
                         <div class="d-flex main-header">
                             <div class="hedaer-line d-flex">
-                                <div>
-                                    <p>45</p>
+                                <div class="item-status">
+                                    <p class="fw-bold fs-5">45</p>
                                     <p>In progress</p>
                                 </div>
-                                <div>
-                                    <p>45</p>
-                                    <p>In progress</p>
+                                <div class="item-status">
+                                    <p class="fw-bold fs-5">24</p>
+                                    <p>Upcoming</p>
                                 </div>
-                                <div>
-                                    <p>45</p>
-                                    <p>In progress</p>
+                                <div class="item-status">
+                                    <p class="fw-bold fs-5">62</p>
+                                    <p>Total Projects</p>
                                 </div>
 
                             </div>
@@ -177,62 +182,72 @@
                     <div class="container-fuid main-container">
                         <div class="row main-items-block">
                             <!-- <div class="col "> -->
-                                <div class="lalala">
+                            <div class="lalala">
                                 <div class="box1">
                                     <div class="first-line">
-                                        
+
                                         <p class="data-textt">December 10,2022</p>
-                                   
+
                                         <div class="b">
                                             <button class="project-btn-more icon-about ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
-                                                  <circle cx="12" cy="12" r="1" />
-                                                  <circle cx="12" cy="5" r="1" />
-                                                  <circle cx="12" cy="19" r="1" /></svg>
-                                              </button>
-                                            </div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-more-vertical">
+                                                    <circle cx="12" cy="12" r="1" />
+                                                    <circle cx="12" cy="5" r="1" />
+                                                    <circle cx="12" cy="19" r="1" />
+                                                </svg>
+                                            </button>
                                         </div>
-                                        <div class="d-flex fafa">
-                                            <div class="text-uppercase middle-block">
+                                    </div>
+                                    <div class="d-flex fafa">
+                                        <div class="text-uppercase middle-block">
                                             <p class="text-web"> Web Designing</p>
                                         </div>
-                                            <div class="middle-block">
+                                        <div class="middle-block">
                                             <p class="text-proto">Prototyping</p>
                                         </div>
-                                        </div>
-                                        <div>
-                                           
-                                            <p class="text-progress">Progress</p>
-                                     
+                                    </div>
+                                    <div>
+
+                                        <p class="text-progress">Progress</p>
+
                                         <div>
                                             <div class="z">
                                                 <div class="progress progress-block ">
-                                                    <div class="progress-bar w-75 progress-line" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
+                                                    <div class="progress-bar w-75 progress-line" role="progressbar"
+                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
-                                                <p class="para">75%</p>
                                             </div>
-                                                
+                                            <p class="para">75%</p>
                                         </div>
-                                        <div>
-                                            <hr class="line">
-                                            </div>
-                                            <div class="box-footer">
-                                            <div class="box-footer-icons">    
-                                                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                                <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                                <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" width="" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus  ">
+
+                                    </div>
+                                    <div>
+                                        <hr class="line">
+                                    </div>
+                                    <div class="box-footer">
+                                        <div class="box-footer-icons">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="" height="12"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-plus  ">
                                                     <path d="M12 5v14M5 12h14" />
-                                                  </svg>
-                                                </button>
-                                            </div>
-                                            <div class="days-left">2 Days left</div>
+                                                </svg>
+                                            </button>
                                         </div>
+                                        <div class="days-left">2 Days left</div>
+                                    </div>
                                 </div>
-                            <!-- </div> -->
-                            
-                            <!-- <div class="col box1 ">
+                                <!-- </div> -->
+
+                                <!-- <div class="col box1 ">
                                 <div class="d-flex ">
                                     <div class="box-header">
                                         <p>December 10, 2020</p>
@@ -252,289 +267,414 @@
                                     <p>wgfwef</p>
                                 </div>
                             </div> -->
-                            <!-- <div class="col "> -->
-                                <div class="box1">
+                                <!-- <div class="col "> -->
+                                <div class="box2">
                                     <div class="first-line">
-                                        
+
                                         <p class="data-textt">December 10,2022</p>
-                                   
+
                                         <div class="b">
                                             <button class="project-btn-more icon-about ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
-                                                  <circle cx="12" cy="12" r="1" />
-                                                  <circle cx="12" cy="5" r="1" />
-                                                  <circle cx="12" cy="19" r="1" /></svg>
-                                              </button>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex fafa">
-                                            <div class="text-uppercase middle-block">
-                                            <p class="text-web"> Web Designing</p>
-                                        </div>
-                                            <div class="middle-block">
-                                            <p class="text-proto">Prototyping</p>
-                                        </div>
-                                        </div>
-                                        <div>
-                                           
-                                            <p class="text-progress">Progress</p>
-                                     
-                                        <div>
-                                            <div class="z">
-                                                <div class="progress progress-block ">
-                                                    <div class="progress-bar w-75 progress-line" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <p class="para">75%</p>
-                                            </div>
-                                                
-                                        </div>
-                                        <div>
-                                            <hr class="line">
-                                            </div>
-                                            <div class="box-footer">
-                                            <div class="box-footer-icons">    
-                                                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                                <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                                <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" width="" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus  ">
-                                                    <path d="M12 5v14M5 12h14" />
-                                                  </svg>
-                                                </button>
-                                            </div>
-                                            <div class="days-left">2 Days left</div>
-                                        </div>
-                                </div>
-                            <!-- </div> -->
-                            <!-- <div class="col "> -->
-                                <div class="box1">
-                                    <div class="first-line">
-                                        
-                                        <p class="data-textt">December 10,2022</p>
-                                   
-                                        <div class="b">
-                                            <button class="project-btn-more icon-about ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
-                                                  <circle cx="12" cy="12" r="1" />
-                                                  <circle cx="12" cy="5" r="1" />
-                                                  <circle cx="12" cy="19" r="1" /></svg>
-                                              </button>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex fafa">
-                                            <div class="text-uppercase middle-block">
-                                            <p class="text-web"> Web Designing</p>
-                                        </div>
-                                            <div class="middle-block">
-                                            <p class="text-proto">Prototyping</p>
-                                        </div>
-                                        </div>
-                                        <div>
-                                           
-                                            <p class="text-progress">Progress</p>
-                                     
-                                        <div>
-                                            <div class="z">
-                                                <div class="progress progress-block ">
-                                                    <div class="progress-bar w-75 progress-line" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <p class="para">75%</p>
-                                            </div>
-                                                
-                                        </div>
-                                        <div>
-                                            <hr class="line">
-                                            </div>
-                                            <div class="box-footer">
-                                            <div class="box-footer-icons">    
-                                                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                                <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                                <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" width="" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus  ">
-                                                    <path d="M12 5v14M5 12h14" />
-                                                  </svg>
-                                                </button>
-                                            </div>
-                                            <div class="days-left">2 Days left</div>
-                                        </div>
-                                </div>
-                            <!-- </div> -->
-                            <!-- <div class="w-100"></div> -->
-                            <div class="box1">
-                                <div class="first-line">
-                                    
-                                    <p class="data-textt">December 10,2022</p>
-                               
-                                    <div class="b">
-                                        <button class="project-btn-more icon-about ">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
-                                              <circle cx="12" cy="12" r="1" />
-                                              <circle cx="12" cy="5" r="1" />
-                                              <circle cx="12" cy="19" r="1" /></svg>
-                                          </button>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-more-vertical">
+                                                    <circle cx="12" cy="12" r="1" />
+                                                    <circle cx="12" cy="5" r="1" />
+                                                    <circle cx="12" cy="19" r="1" />
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="d-flex fafa">
                                         <div class="text-uppercase middle-block">
-                                        <p class="text-web"> Web Designing</p>
-                                    </div>
+                                            <p class="text-web"> Testing</p>
+                                        </div>
                                         <div class="middle-block">
-                                        <p class="text-proto">Prototyping</p>
-                                    </div>
+                                            <p class="text-proto">Prototyping</p>
+                                        </div>
                                     </div>
                                     <div>
-                                       
-                                        <p class="text-progress">Progress</p>
-                                 
-                                    <div>
-                                        <div class="z">
-                                            <div class="progress progress-block ">
-                                                <div class="progress-bar w-75 progress-line" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+
+                                        <p class="text-progress text-up">Progress</p>
+
+                                        <div>
+                                            <div class="z">
+                                                <div class="progress progress-block ">
+                                                    <div class="progress-bar w-50 bg-primary  " role="progressbar "
+                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
-                                            <p class="para">75%</p>
+                                            <p class="para">50%</p>
                                         </div>
-                                            
+
                                     </div>
                                     <div>
                                         <hr class="line">
-                                        </div>
-                                        <div class="box-footer">
-                                        <div class="box-footer-icons">    
-                                              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" class="rounded-circle" width="20px" height="20px" alt="participant">
+                                    </div>
+                                    <div class="box-footer">
+                                        <div class="box-footer-icons">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
                                             <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus  ">
-                                                <path d="M12 5v14M5 12h14" />
-                                              </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="" height="12"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-plus  ">
+                                                    <path d="M12 5v14M5 12h14" />
+                                                </svg>
                                             </button>
                                         </div>
                                         <div class="days-left">2 Days left</div>
                                     </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="col "> -->
+                                <div class="box3">
+                                    <div class="first-line">
+
+                                        <p class="data-textt">December 10,2022</p>
+
+                                        <div class="b">
+                                            <button class="project-btn-more icon-about ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-more-vertical">
+                                                    <circle cx="12" cy="12" r="1" />
+                                                    <circle cx="12" cy="5" r="1" />
+                                                    <circle cx="12" cy="19" r="1" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex fafa">
+                                        <div class="text-uppercase middle-block">
+                                            <p class="text-web"> SVG Animations</p>
+                                        </div>
+                                        <div class="middle-block">
+                                            <p class="text-proto">Prototyping</p>
+                                        </div>
+                                    </div>
+                                    <div>
+
+                                        <p class="text-progress">Progress</p>
+
+                                        <div>
+                                            <div class="z">
+                                                <div class="progress progress-block">
+                                                    <div class="progress-bar bg-info bg-secondary" role="progressbar"
+                                                        style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                                <!-- <div class="progress progress-block ">
+                                                    <div class="progress-bar w-80 bg-dark" role="progressbar"
+                                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div> -->
+                                            </div>
+                                            <p class="para">80%</p>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <hr class="line">
+                                    </div>
+                                    <div class="box-footer">
+                                        <div class="box-footer-icons">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="" height="12"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-plus  ">
+                                                    <path d="M12 5v14M5 12h14" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="days-left">2 Days left</div>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="w-100"></div> -->
+                                <div class="box4">
+                                    <div class="first-line">
+
+                                        <p class="data-textt">December 10,2022</p>
+
+                                        <div class="b">
+                                            <button class="project-btn-more icon-about ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-more-vertical">
+                                                    <circle cx="12" cy="12" r="1" />
+                                                    <circle cx="12" cy="5" r="1" />
+                                                    <circle cx="12" cy="19" r="1" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex fafa">
+                                        <div class="text-uppercase middle-block">
+                                            <p class="text-web"> UI Development</p>
+                                        </div>
+                                        <div class="middle-block">
+                                            <p class="text-proto">Prototyping</p>
+                                        </div>
+                                    </div>
+                                    <div>
+
+                                        <p class="text-progress">Progress</p>
+
+                                        <div>
+                                            <div class="z">
+                                                <div class="progress progress-block ">
+                                                    <div class="progress-bar bg-info bg-danger" role="progressbar"
+                                                        style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <p class="para">20%</p>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <hr class="line">
+                                    </div>
+                                    <div class="box-footer">
+                                        <div class="box-footer-icons">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="" height="12"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-plus  ">
+                                                    <path d="M12 5v14M5 12h14" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="days-left">2 Days left</div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col "> -->
+                                <div class="box5">
+                                    <div class="first-line">
+
+                                        <p class="data-textt">December 10,2022</p>
+
+                                        <div class="b">
+                                            <button class="project-btn-more icon-about ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-more-vertical">
+                                                    <circle cx="12" cy="12" r="1" />
+                                                    <circle cx="12" cy="5" r="1" />
+                                                    <circle cx="12" cy="19" r="1" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex fafa">
+                                        <div class="text-uppercase middle-block">
+                                            <p class="text-web">Data Analysis</p>
+                                        </div>
+                                        <div class="middle-block">
+                                            <p class="text-proto">Prototyping</p>
+                                        </div>
+                                    </div>
+                                    <div>
+
+                                        <p class="text-progress">Progress</p>
+
+                                        <div>
+                                            <div class="z">
+                                                <div class="progress progress-block ">
+                                                    <div class="progress-bar bg-info bg-success" role="progressbar"
+                                                        style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <p class="para">60%</p>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <hr class="line">
+                                    </div>
+                                    <div class="box-footer">
+                                        <div class="box-footer-icons">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="" height="12"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-plus  ">
+                                                    <path d="M12 5v14M5 12h14" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="days-left">2 Days left</div>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="col"> -->
+                                <div class="box6">
+                                    <div class="first-line">
+
+                                        <p class="data-textt">December 10,2022</p>
+
+                                        <div class="b">
+                                            <button class="project-btn-more icon-about ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-more-vertical">
+                                                    <circle cx="12" cy="12" r="1" />
+                                                    <circle cx="12" cy="5" r="1" />
+                                                    <circle cx="12" cy="19" r="1" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex fafa">
+                                        <div class="text-uppercase middle-block">
+                                            <p class="text-web"> Web Designing</p>
+                                        </div>
+                                        <div class="middle-block">
+                                            <p class="text-proto">Prototyping</p>
+                                        </div>
+                                    </div>
+                                    <div>
+
+                                        <p class="text-progress">Progress</p>
+
+                                        <div>
+                                            <div class="z">
+                                                <div class="progress progress-block ">
+                                                    <div class="progress-bar bg-info bg-warning" role="progressbar"
+                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <p class="para">40%</p>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <hr class="line">
+                                    </div>
+                                    <div class="box-footer">
+                                        <div class="box-footer-icons">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                                                class="rounded-circle" width="20px" height="20px" alt="participant">
+                                            <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="" height="12"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-plus  ">
+                                                    <path d="M12 5v14M5 12h14" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="days-left">2 Days left</div>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
                             </div>
-                            <!-- <div class="col "> -->
-                                <div class="box1">
-                                    <div class="first-line">
-                                        
-                                        <p class="data-textt">December 10,2022</p>
-                                   
-                                        <div class="b">
-                                            <button class="project-btn-more icon-about ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
-                                                  <circle cx="12" cy="12" r="1" />
-                                                  <circle cx="12" cy="5" r="1" />
-                                                  <circle cx="12" cy="19" r="1" /></svg>
-                                              </button>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex fafa">
-                                            <div class="text-uppercase middle-block">
-                                            <p class="text-web"> Web Designing</p>
-                                        </div>
-                                            <div class="middle-block">
-                                            <p class="text-proto">Prototyping</p>
-                                        </div>
-                                        </div>
-                                        <div>
-                                           
-                                            <p class="text-progress">Progress</p>
-                                     
-                                        <div>
-                                            <div class="z">
-                                                <div class="progress progress-block ">
-                                                    <div class="progress-bar w-75 progress-line" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <p class="para">75%</p>
-                                            </div>
-                                                
-                                        </div>
-                                        <div>
-                                            <hr class="line">
-                                            </div>
-                                            <div class="box-footer">
-                                            <div class="box-footer-icons">    
-                                                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                                <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                                <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" width="" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus  ">
-                                                    <path d="M12 5v14M5 12h14" />
-                                                  </svg>
-                                                </button>
-                                            </div>
-                                            <div class="days-left">2 Days left</div>
-                                        </div>
-                                </div>
-                            <!-- </div> -->
-                            <!-- <div class="col"> -->
-                                <div class="box1">
-                                    <div class="first-line">
-                                        
-                                        <p class="data-textt">December 10,2022</p>
-                                   
-                                        <div class="b">
-                                            <button class="project-btn-more icon-about ">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
-                                                  <circle cx="12" cy="12" r="1" />
-                                                  <circle cx="12" cy="5" r="1" />
-                                                  <circle cx="12" cy="19" r="1" /></svg>
-                                              </button>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex fafa">
-                                            <div class="text-uppercase middle-block">
-                                            <p class="text-web"> Web Designing</p>
-                                        </div>
-                                            <div class="middle-block">
-                                            <p class="text-proto">Prototyping</p>
-                                        </div>
-                                        </div>
-                                        <div>
-                                           
-                                            <p class="text-progress">Progress</p>
-                                     
-                                        <div>
-                                            <div class="z">
-                                                <div class="progress progress-block ">
-                                                    <div class="progress-bar w-75 progress-line" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <p class="para">75%</p>
-                                            </div>
-                                                
-                                        </div>
-                                        <div>
-                                            <hr class="line">
-                                            </div>
-                                            <div class="box-footer">
-                                            <div class="box-footer-icons">    
-                                                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                                <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" class="rounded-circle" width="20px" height="20px" alt="participant">
-                                                <button class=" rounded-circle box-footer-plus" style="color: #ff942e;">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" width="" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus  ">
-                                                    <path d="M12 5v14M5 12h14" />
-                                                  </svg>
-                                                </button>
-                                            </div>
-                                            <div class="days-left">2 Days left</div>
-                                        </div>
-                                </div>
-                            <!-- </div> -->
-                        </div>
                         </div>
                     </div>
 
+                </div>
+                <div class="col-xl-3 col-md-2 col-sm-12 comments-block">
+                    <div>
+                        <p class="fs-5 fw-bold mt-4">Client Messages</p>
+                        <hr>
                     </div>
-                    <div class="col-xl-4 col-md-2 col-sm-12 comments-block">
-                        <h2>Привет</h2>
+                    <div class=" messages">
+                        <div class="messages-box">
+                                
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
+                                    class="rounded-circle" width="40px" height="40px" alt="profile image">
+                                    
+                            <div class="blablalb">
+                                <div class="comments-header">
+                                    <div>Stefa</div>
+                                    <div>
+                                        
+                                        <label for="star-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-star">
+                                                <polygon
+                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <p>I got your first assignment. It was quite good. 🥳 We can continue with the next assignment.</p>
+                                <p class="text-end">Dec,12</p>
+                                
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <hr>
+                    <div class=" messages">
+                        <div class="messages-box">
+                                
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
+                                    class="rounded-circle" width="40px" height="40px" alt="profile image">
+                                    
+                            <div class="blablalb">
+                                <div class="comments-header">
+                                    <div>Stefa</div>
+                                    <div>
+                                        
+                                        <label for="star-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-star">
+                                                <polygon
+                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <p>I got your first assignment. It was quite good. 🥳 We can continue with the next assignment.</p>
+                                <p class="text-end">Dec,12</p>
+                                
+
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
